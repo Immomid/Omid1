@@ -9,9 +9,32 @@
 <body>
   <div class="overlay">
     <h1>⛓️ OmidSec Terminal</h1>
-    <p class="typewriter">Connecting to unknown networks...</p>
-    <p class="typewriter">Access to database authorized ✅</p>
-    <p class="typewriter hacked">Hacked by Omid ⚡</p>
+    <p id="line1" class="typewriter"></p>
+    <p id="line2" class="typewriter"></p>
+    <p id="line3" class="typewriter hacked"></p>
   </div>
+
+  <script>
+    const lines = [
+      "Connecting to unknown networks...",
+      "Access to database authorized ✅",
+      "Hacked by Omid ⚡"
+    ];
+
+    function typeLine(id, text, delay) {
+      setTimeout(() => {
+        let i = 0;
+        const interval = setInterval(() => {
+          document.getElementById(id).textContent += text[i];
+          i++;
+          if (i === text.length) clearInterval(interval);
+        }, 100);
+      }, delay);
+    }
+
+    typeLine("line1", lines[0], 1000);
+    typeLine("line2", lines[1], 4000);
+    typeLine("line3", lines[2], 7000);
+  </script>
 </body>
 </html>
