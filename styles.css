@@ -1,19 +1,56 @@
 body {
-  background: linear-gradient(-45deg, #ff0000, #00ff00, #0000ff, #ffff00);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
-  color: #fff;
-  font-family: system-ui, "Vazirmatn", sans-serif;
-  min-height: 100vh;
   margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('https://raw.githubusercontent.com/Immomid/Omid1/refs/heads/main/Hacker.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: fadeIn 3s ease-in-out;
+  font-family: 'Courier New', monospace;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-@keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.typewriter {
+  font-size: 1.2em;
+  margin: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ffcc;
+  animation: typing 4s steps(30, end), blink 0.7s step-end infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00ffcc; }
+  to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
