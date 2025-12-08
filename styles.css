@@ -1,6 +1,26 @@
 body {
-  background-image: url("Hacker.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(-45deg, #1a1a1a, #333, #111, #000);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #e6eaef;
+  font-family: system-ui, "Vazirmatn", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1, p {
+  text-shadow: 2px 2px 5px #000;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
