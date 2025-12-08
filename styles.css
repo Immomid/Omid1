@@ -33,7 +33,6 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #00ffcc;
-  animation: typing 4s steps(30, end), blink 0.7s step-end infinite;
 }
 
 .hacked {
@@ -50,13 +49,4 @@ h1 {
 @keyframes glow {
   from { text-shadow: 0 0 10px #00ffcc; }
   to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
 }
